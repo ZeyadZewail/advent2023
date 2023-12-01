@@ -1,0 +1,1 @@
+    // measure_solution("Day 1 p2:".to_owned(), "src/inputs/day1.txt", day1::part2);
