@@ -4,8 +4,6 @@ use std::{
     io::{BufRead, BufReader},
 };
 
-use fancy_regex::Regex;
-
 pub fn part1(reader: BufReader<File>) -> String {
     let mut sum = 0;
 
@@ -148,21 +146,21 @@ pub fn part2(reader: BufReader<File>) -> String {
     sum.to_string()
 }
 
-fn parse_number(text: String) -> i32 {
-    let mut value_hashmap: HashMap<String, i32> = HashMap::new();
-    value_hashmap.insert("one".to_string(), 1);
-    value_hashmap.insert("two".to_string(), 2);
-    value_hashmap.insert("three".to_string(), 3);
-    value_hashmap.insert("four".to_string(), 4);
-    value_hashmap.insert("five".to_string(), 5);
-    value_hashmap.insert("six".to_string(), 6);
-    value_hashmap.insert("seven".to_string(), 7);
-    value_hashmap.insert("eight".to_string(), 8);
-    value_hashmap.insert("nine".to_string(), 9);
+// fn parse_number(text: String) -> i32 {
+//     let mut value_hashmap: HashMap<String, i32> = HashMap::new();
+//     value_hashmap.insert("one".to_string(), 1);
+//     value_hashmap.insert("two".to_string(), 2);
+//     value_hashmap.insert("three".to_string(), 3);
+//     value_hashmap.insert("four".to_string(), 4);
+//     value_hashmap.insert("five".to_string(), 5);
+//     value_hashmap.insert("six".to_string(), 6);
+//     value_hashmap.insert("seven".to_string(), 7);
+//     value_hashmap.insert("eight".to_string(), 8);
+//     value_hashmap.insert("nine".to_string(), 9);
 
-    if text.parse::<i32>().is_ok() {
-        return text.parse::<i32>().unwrap();
-    } else {
-        return value_hashmap[&text];
-    }
-}
+//     if text.parse::<i32>().is_ok() {
+//         return text.parse::<i32>().unwrap();
+//     } else {
+//         return value_hashmap[&text];
+//     }
+// }
